@@ -1,9 +1,11 @@
 [{
+    "id": "1",
     "nome":"luiz",
     "tarefa":"cadastrar item",
     "status":"completo"
 },
-{
+{   
+    "id":"2",
     "nome":"lucas",
     "tarefa":"modificar item",
     "status":"em andamento"
