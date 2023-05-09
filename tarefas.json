@@ -1,0 +1,10 @@
+[{
+    "nome":"luiz",
+    "tarefa":"cadastrar item",
+    "status":"completo"
+},
+{
+    "nome":"lucas",
+    "tarefa":"modificar item",
+    "status":"em andamento"
+}]
