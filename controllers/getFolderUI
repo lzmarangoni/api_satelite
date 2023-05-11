@@ -1,0 +1,12 @@
+const { getTasksUI, dados } = require("../services/UI-UX-tarefas")
+
+function getFolderUI(req, res){
+    const tarefas = getTasksUI()
+   res.send(tarefas)
+}
+
+
+
+module.exports = {
+    getFolderUI
+}
