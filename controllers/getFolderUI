@@ -1,8 +1,10 @@
 const { getTasksUI, dados } = require("../services/UI-UX-tarefas")
 
-function getFolderUI(req, res){
-    const tarefas = getTasksUI()
+async function getFolderUI(req, res){
+    const tarefas = await getTasksUI()
+    console.log(tarefas)
    res.send(tarefas)
+   
 }
 
 
