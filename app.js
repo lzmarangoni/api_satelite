@@ -1,11 +1,11 @@
 const express = require('express')
-const rotaTarefas = require("./routes/UI-UX-tarefas")
+const routeTask = require("./routes/routeTask")
 const app = express()
 
 const port = 8000
 
 
-app.use('/', rotaTarefas)
+app.use('/', routeTask)
 app.listen(port,()=>{
     console.log("escutando")
 })
