@@ -1,8 +1,0 @@
-const {Router} = require("express")
-
-
-const router = Router()
-
-router.get('/tempoDeTarefa', getFolder)
-
-module.exports = router
