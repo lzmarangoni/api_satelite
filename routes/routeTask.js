@@ -5,6 +5,4 @@ const router = Router()
 
 router.get('/tarefas', getFolder)
 
-
-
 module.exports = router
