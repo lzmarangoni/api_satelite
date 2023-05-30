@@ -5,10 +5,22 @@ const { urlTasksTEam, credencials } = require("../config")
 
 
 async function getTasks() {
-  const response = await axios.get(urlTasksTEam, credencials)
+  let allTasks = []
+  let pages = 0
+  
  
- const tasks = response.data
-return tasks
+  while(pages < 10){
+    let url = urlTasksTEam + pages
+    let response = await axios.get(url, credencials)
+    allTasks = allTasks.concat(response.data.tasks)
+    pages++
+    console.log(url)
+  }
+
+
+
+ 
+return allTasks
 }
 
 
