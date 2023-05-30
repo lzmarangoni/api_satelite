@@ -1,11 +1,18 @@
 const { getTasks, dados } = require("../services/getTasks")
+const { getTaskTime } = require("../services/getTasksTime")
 
 async function getFolder(req, res){
     res.header({'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': '*'})
+<<<<<<< HEAD
     const tarefas = await getTasks()    
     
     res.send(tarefas)
+=======
+    //const tarefas = await getTasks()
+    const tempoTarefas = await getTaskTime()
+   res.send(/*tarefas,*/ tempoTarefas)
+>>>>>>> 2214f241a351fe0ef33c79fa481d5816d2439813
    
 }
 
