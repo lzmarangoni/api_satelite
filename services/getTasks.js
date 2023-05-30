@@ -3,11 +3,6 @@ const axios = require('axios')
 const { urlTasksTeam, credencials } = require("../config")
 
 async function getTasks() {
-<<<<<<< HEAD
-  const response = await axios.get(urlTasksTeam, credencials)
-  const tasks = response.data
-return tasks
-=======
   let allTasks = []
   let pages = 0
   
@@ -24,7 +19,6 @@ return tasks
 
  
 return allTasks
->>>>>>> 2214f241a351fe0ef33c79fa481d5816d2439813
 }
 
 module.exports = { getTasks }
