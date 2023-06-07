@@ -1,6 +1,6 @@
-const { getDuration, dados } = require("../services/getTimeTracking")
+const { getDuration} = require("../services/getTimeTracking")
 
-async function getDuration(req, res) {
+async function returnDuration(req, res) {
     res.header({
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': '*'
@@ -18,6 +18,6 @@ async function getDuration(req, res) {
 
 
 module.exports = {
-    getDuration
+    returnDuration
 }
 

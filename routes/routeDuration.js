@@ -1,8 +1,8 @@
 const {Router} = require("express")
-const { getDuration  } = require("../controllers/getDurationOffTime")
+const { returnDuration  } = require("../controllers/DurationController")
 
 const router = Router()
 
-router.get('/duracao', getDuration)
+router.get('/tracking', returnDuration)
 
-module.exports = routerS
+module.exports = router
