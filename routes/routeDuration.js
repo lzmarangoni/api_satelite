@@ -5,4 +5,4 @@ const router = Router()
 
 router.get('/duracao', getDuration)
 
-module.exports = router
+module.exports = routerS
