@@ -10,9 +10,15 @@ async function getDuration(){
     let timeTracking = []
 
     for(let i = 0; i < members.length; i++){
+      
       let getTime = await axios.get(urlTaskTime + members[i], credencials)
-      let response = getTime.data
-      timeTracking.push(response)
+      let response = getTime.data.data
+      if (response.length === 0){
+        continue
+      }
+        timeTracking.push(response)
+      
+      
       
     }
     console.log(timeTracking)
