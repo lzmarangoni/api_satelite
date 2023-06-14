@@ -1,6 +1,6 @@
 const axios = require('axios')
 const {urlTasksTeam, credencials } = require("../config")
-
+const fs = require('fs')
 
 async function getTasks() {
   let allTasks = []
@@ -21,9 +21,6 @@ async function getTasks() {
     pages++
     console.log(url)
     }
-    
-
-
 
 return allTasks
 }

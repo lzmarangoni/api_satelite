@@ -1,6 +1,6 @@
 const axios = require('axios')
 const { urlTaskTime, urlMembers, credencials } = require("../config")
-
+const fs = require('fs')
 
 async function getDuration(){
     const responseUsers = await axios.get(urlMembers, credencials)
@@ -16,9 +16,9 @@ async function getDuration(){
       if (response.length === 0){
         continue
       }
-        timeTracking.push(response)
-      
-      
+
+      response.map( task => timeTracking.push(task) )
+        
       
     }
     console.log(timeTracking)
