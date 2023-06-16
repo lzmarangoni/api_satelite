@@ -11,12 +11,22 @@ async function getTasks() {
     let url = urlTasksTeam + pages 
     let response = await axios.get(url, credencials)
     
-    const tasks = response.data.tasks
+    let tasks = response.data.tasks
 
     if (tasks.length === 0){
       break
     }
+    tasks = tasks.map(task => {
+      
+      task.tags = task.tags.map(tag => tag.name)
+      task.date_created = new Date(+task.date_created)
+      task.date_updated = new Date(+task.date_updated)
+      task.assignees = task.assignees.map(assign => assign.username)
+
+      return task
+    })
     
+
     allTasks.push(...tasks)
     pages++
     console.log(url)

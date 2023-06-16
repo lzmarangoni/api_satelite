@@ -17,10 +17,14 @@ async function getDuration(){
         continue
       }
 
-      response.map( task => timeTracking.push(task) )
+      response.map( task => {
+        timeTracking.push(task) 
+      })
         
       
     }
+
+    
     console.log(timeTracking)
     return timeTracking
     
