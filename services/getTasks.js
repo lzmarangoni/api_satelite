@@ -18,11 +18,10 @@ async function getTasks() {
     }
     tasks = tasks.map(task => {
       
-      task.tags = task.tags.map(tag => tag.name)
+      
       task.date_created = new Date(+task.date_created)
       task.date_updated = new Date(+task.date_updated)
-      task.assignees = task.assignees.map(assign => assign.username)
-
+      
       return task
     })
     

@@ -18,6 +18,20 @@ async function getDuration(){
       }
 
       response.map( task => {
+        task.start = new Date (+task.start)
+        task.end = new Date (+task.end)
+        
+        
+        const durationInSeconds = parseInt(task.duration);
+
+const hours = Math.floor(durationInSeconds / 3600);
+const minutes = Math.floor((durationInSeconds % 3600) / 60);
+const seconds = durationInSeconds % 60;
+
+const formattedDuration = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+task.duration = formattedDuration
+
         timeTracking.push(task) 
       })
         
