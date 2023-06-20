@@ -21,7 +21,7 @@ async function getTasks() {
       
       task.date_created = new Date(+task.date_created)
       task.date_updated = new Date(+task.date_updated)
-      
+      task.start_date = new Date(+task.start_date)
       return task
     })
     
